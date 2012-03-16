@@ -1,0 +1,1017 @@
+[INFO ]12:54:21,055, [Class]App, Starting quorum peer
+[INFO ]12:54:56,854, [Class]App, Starting quorum peer
+[INFO ]12:54:56,909, [Class]LeaderElection, start looking for leader
+[INFO ]12:55:54,178, [Class]App, Starting quorum peer
+[INFO ]12:55:54,233, [Class]LeaderElection, start looking for leader
+[INFO ]12:56:29,480, [Class]App, Starting quorum peer
+[INFO ]12:56:29,552, [Class]LeaderElection, start looking for leader
+[WARN ]12:56:30,661, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.toSend(ElectionCnxManagerImpl.java:316)
+	at com.techq.available.quorum.Messenger$WorkerSender.process(Messenger.java:262)
+	at com.techq.available.quorum.Messenger$WorkerSender.run(Messenger.java:233)
+	at java.lang.Thread.run(Unknown Source)
+[WARN ]12:56:31,680, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.toSend(ElectionCnxManagerImpl.java:316)
+	at com.techq.available.quorum.Messenger$WorkerSender.process(Messenger.java:262)
+	at com.techq.available.quorum.Messenger$WorkerSender.run(Messenger.java:233)
+	at java.lang.Thread.run(Unknown Source)
+[INFO ]12:56:32,606, [Class]Messenger, finally, so what?
+[WARN ]12:56:32,685, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.toSend(ElectionCnxManagerImpl.java:316)
+	at com.techq.available.quorum.Messenger$WorkerSender.process(Messenger.java:262)
+	at com.techq.available.quorum.Messenger$WorkerSender.run(Messenger.java:233)
+	at java.lang.Thread.run(Unknown Source)
+[WARN ]12:56:33,691, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:56:33,692, [Class]LeaderElection, Notification time out: 400
+[WARN ]12:56:34,902, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:56:35,633, [Class]Messenger, finally, so what?
+[WARN ]12:56:35,910, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:56:36,918, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:56:36,919, [Class]LeaderElection, Notification time out: 800
+[WARN ]12:56:38,172, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:56:38,636, [Class]Messenger, finally, so what?
+[WARN ]12:56:39,176, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:56:40,177, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:56:40,178, [Class]LeaderElection, Notification time out: 1600
+[WARN ]12:56:41,392, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:56:41,644, [Class]Messenger, finally, so what?
+[WARN ]12:56:42,387, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:56:43,391, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:56:43,392, [Class]LeaderElection, Notification time out: 3200
+[WARN ]12:56:44,587, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:56:44,645, [Class]Messenger, finally, so what?
+[WARN ]12:56:45,591, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:56:46,586, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:56:46,587, [Class]LeaderElection, Notification time out: 6400
+[INFO ]12:56:47,648, [Class]Messenger, finally, so what?
+[WARN ]12:56:47,792, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:56:48,797, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:56:49,797, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:56:49,802, [Class]LeaderElection, Notification time out: 12800
+[INFO ]12:56:50,650, [Class]Messenger, finally, so what?
+[WARN ]12:56:51,011, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:56:52,015, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:56:53,025, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:56:53,026, [Class]LeaderElection, Notification time out: 25600
+[INFO ]12:56:53,653, [Class]Messenger, finally, so what?
+[WARN ]12:56:54,234, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:56:55,241, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:56:56,241, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:56:56,242, [Class]LeaderElection, Notification time out: 51200
+[INFO ]12:56:56,655, [Class]Messenger, finally, so what?
+[INFO ]12:58:03,127, [Class]App, Starting quorum peer
+[INFO ]12:58:03,185, [Class]LeaderElection, start looking for leader
+[WARN ]12:58:04,238, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.toSend(ElectionCnxManagerImpl.java:316)
+	at com.techq.available.quorum.Messenger$WorkerSender.process(Messenger.java:262)
+	at com.techq.available.quorum.Messenger$WorkerSender.run(Messenger.java:233)
+	at java.lang.Thread.run(Unknown Source)
+[WARN ]12:58:05,349, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.toSend(ElectionCnxManagerImpl.java:316)
+	at com.techq.available.quorum.Messenger$WorkerSender.process(Messenger.java:262)
+	at com.techq.available.quorum.Messenger$WorkerSender.run(Messenger.java:233)
+	at java.lang.Thread.run(Unknown Source)
+[INFO ]12:58:06,239, [Class]Messenger, finally, so what?
+[WARN ]12:58:06,450, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.toSend(ElectionCnxManagerImpl.java:316)
+	at com.techq.available.quorum.Messenger$WorkerSender.process(Messenger.java:262)
+	at com.techq.available.quorum.Messenger$WorkerSender.run(Messenger.java:233)
+	at java.lang.Thread.run(Unknown Source)
+[WARN ]12:58:07,451, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:58:07,452, [Class]LeaderElection, Notification time out: 400
+[WARN ]12:58:08,666, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:58:09,248, [Class]Messenger, finally, so what?
+[WARN ]12:58:09,673, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:58:10,700, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:58:10,702, [Class]LeaderElection, Notification time out: 800
+[WARN ]12:58:11,900, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:58:12,250, [Class]Messenger, finally, so what?
+[WARN ]12:58:12,905, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:58:13,914, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:58:13,916, [Class]LeaderElection, Notification time out: 1600
+[WARN ]12:58:15,128, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:58:15,274, [Class]Messenger, finally, so what?
+[WARN ]12:58:16,131, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:58:17,137, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:58:17,139, [Class]LeaderElection, Notification time out: 3200
+[INFO ]12:58:18,276, [Class]Messenger, finally, so what?
+[WARN ]12:58:18,344, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:58:19,350, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:58:20,356, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:58:20,357, [Class]LeaderElection, Notification time out: 6400
+[INFO ]12:58:42,272, [Class]App, Starting quorum peer
+[INFO ]12:58:42,348, [Class]LeaderElection, start looking for leader
+[WARN ]12:58:43,417, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.toSend(ElectionCnxManagerImpl.java:316)
+	at com.techq.available.quorum.Messenger$WorkerSender.process(Messenger.java:262)
+	at com.techq.available.quorum.Messenger$WorkerSender.run(Messenger.java:233)
+	at java.lang.Thread.run(Unknown Source)
+[WARN ]12:58:44,433, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.toSend(ElectionCnxManagerImpl.java:316)
+	at com.techq.available.quorum.Messenger$WorkerSender.process(Messenger.java:262)
+	at com.techq.available.quorum.Messenger$WorkerSender.run(Messenger.java:233)
+	at java.lang.Thread.run(Unknown Source)
+[INFO ]12:58:45,400, [Class]Messenger, finally, so what?
+[WARN ]12:58:45,439, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.toSend(ElectionCnxManagerImpl.java:316)
+	at com.techq.available.quorum.Messenger$WorkerSender.process(Messenger.java:262)
+	at com.techq.available.quorum.Messenger$WorkerSender.run(Messenger.java:233)
+	at java.lang.Thread.run(Unknown Source)
+[WARN ]12:58:46,440, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:58:46,441, [Class]LeaderElection, Notification time out: 400
+[WARN ]12:58:47,651, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:58:48,415, [Class]Messenger, finally, so what?
+[WARN ]12:58:48,657, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:58:49,660, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:58:49,661, [Class]LeaderElection, Notification time out: 800
+[WARN ]12:58:50,869, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:58:51,417, [Class]Messenger, finally, so what?
+[WARN ]12:58:51,875, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]12:58:52,882, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:58:52,883, [Class]LeaderElection, Notification time out: 1600
+[WARN ]12:58:54,122, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]12:58:54,519, [Class]Messenger, finally, so what?
+[WARN ]12:58:55,122, [Class]ElectionCnxManagerImpl, Cannot open channel to 1 at election address /127.0.0.1:6556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:20:34,295, [Class]App, Starting quorum peer
+[INFO ]13:20:34,348, [Class]LeaderElection, start looking for leader
+[INFO ]13:20:34,363, [Class]Messenger, Notification: 1 (leader), 0 (zxid), 0 (round), LOOKING (state), 1 (sid), 0 (peerEPoch), LOOKING (my state)
+[INFO ]13:20:34,364, [Class]Messenger, finally, so what?
+[WARN ]13:20:35,401, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.toSend(ElectionCnxManagerImpl.java:316)
+	at com.techq.available.quorum.Messenger$WorkerSender.process(Messenger.java:262)
+	at com.techq.available.quorum.Messenger$WorkerSender.run(Messenger.java:233)
+	at java.lang.Thread.run(Unknown Source)
+[WARN ]13:20:36,418, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.toSend(ElectionCnxManagerImpl.java:316)
+	at com.techq.available.quorum.Messenger$WorkerSender.process(Messenger.java:262)
+	at com.techq.available.quorum.Messenger$WorkerSender.run(Messenger.java:233)
+	at java.lang.Thread.run(Unknown Source)
+[INFO ]13:20:37,367, [Class]Messenger, finally, so what?
+[WARN ]13:20:37,417, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:20:37,419, [Class]LeaderElection, Notification time out: 400
+[WARN ]13:20:38,618, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]13:20:39,619, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:20:39,621, [Class]LeaderElection, Notification time out: 800
+[INFO ]13:20:40,376, [Class]Messenger, finally, so what?
+[WARN ]13:20:40,834, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]13:20:41,836, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:20:41,837, [Class]LeaderElection, Notification time out: 1600
+[WARN ]13:20:43,051, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:20:43,377, [Class]Messenger, finally, so what?
+[WARN ]13:20:44,060, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:20:44,062, [Class]LeaderElection, Notification time out: 3200
+[WARN ]13:20:45,269, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]13:20:46,273, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:20:46,275, [Class]LeaderElection, Notification time out: 6400
+[INFO ]13:20:46,380, [Class]Messenger, finally, so what?
+[WARN ]13:20:47,484, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]13:20:48,504, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:20:48,505, [Class]LeaderElection, Notification time out: 12800
+[INFO ]13:20:49,383, [Class]Messenger, finally, so what?
+[WARN ]13:20:49,713, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]13:20:50,717, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:20:50,718, [Class]LeaderElection, Notification time out: 25600
+[WARN ]13:20:51,916, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:20:52,387, [Class]Messenger, finally, so what?
+[WARN ]13:20:52,922, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:20:52,923, [Class]LeaderElection, Notification time out: 51200
+[WARN ]13:20:54,129, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]13:20:55,125, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:20:55,126, [Class]LeaderElection, Notification time out: 60000
+[INFO ]13:20:55,391, [Class]Messenger, finally, so what?
+[WARN ]13:20:56,336, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]13:20:57,335, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:20:57,336, [Class]LeaderElection, Notification time out: 60000
+[INFO ]13:20:58,392, [Class]Messenger, finally, so what?
+[WARN ]13:20:58,542, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[WARN ]13:20:59,560, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:20:59,565, [Class]LeaderElection, Notification time out: 60000
+[WARN ]13:21:00,774, [Class]ElectionCnxManagerImpl, Cannot open channel to 2 at election address /127.0.0.1:7556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:21:01,406, [Class]Messenger, finally, so what?
+[WARN ]13:21:01,777, [Class]ElectionCnxManagerImpl, Cannot open channel to 3 at election address /127.0.0.1:8556
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectOne(ElectionCnxManagerImpl.java:344)
+	at com.techq.available.connector.impl.ElectionCnxManagerImpl.connectAll(ElectionCnxManagerImpl.java:375)
+	at com.techq.available.quorum.LeaderElection.lookForLeader(LeaderElection.java:61)
+	at com.techq.available.App.main(App.java:109)
+[INFO ]13:21:01,778, [Class]LeaderElection, Notification time out: 60000

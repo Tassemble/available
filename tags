@@ -1,0 +1,169 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+App	src/main/java/com/techq/available/App.java	/^public class App $/;"	c
+AppTest	src/test/java/com/techq/available/AppTest.java	/^    public AppTest( String testName )$/;"	m	class:AppTest
+AppTest	src/test/java/com/techq/available/AppTest.java	/^public class AppTest $/;"	c
+ElectionCnxManager	src/main/java/com/techq/available/connector/ElectionCnxManager.java	/^public interface ElectionCnxManager {$/;"	i
+ElectionCnxManagerImpl	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public ElectionCnxManagerImpl(QuorumPeer self) {$/;"	m	class:ElectionCnxManagerImpl
+ElectionCnxManagerImpl	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^public class ElectionCnxManagerImpl {$/;"	c
+FOLLOWING	src/main/java/com/techq/available/quorum/ServerState.java	/^	LOOKING, FOLLOWING, LEADING;$/;"	e	enum:ServerState	file:
+LEADING	src/main/java/com/techq/available/quorum/ServerState.java	/^	LOOKING, FOLLOWING, LEADING;$/;"	e	enum:ServerState	file:
+LOG	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	private static final Logger LOG = LoggerFactory.getLogger(ElectionCnxManagerImpl.class);$/;"	f	class:ElectionCnxManagerImpl	file:
+LOOKING	src/main/java/com/techq/available/quorum/ServerState.java	/^	LOOKING, FOLLOWING, LEADING;$/;"	e	enum:ServerState	file:
+LeaderElection	src/main/java/com/techq/available/quorum/LeaderElection.java	/^public class LeaderElection {$/;"	c
+LearnerType	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	public enum LearnerType {$/;"	g	class:QuorumPeer
+Listener	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public class Listener extends Thread {$/;"	c	class:ElectionCnxManagerImpl
+MAX_CONNECTION_ATTEMPTS	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	static final int MAX_CONNECTION_ATTEMPTS = 2;$/;"	f	class:ElectionCnxManagerImpl
+Message	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		Message(ByteBuffer buffer, long sid) {$/;"	m	class:ElectionCnxManagerImpl.Message
+Message	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	static public class Message {$/;"	c	class:ElectionCnxManagerImpl
+Message	src/main/java/com/techq/available/meta/Message.java	/^	Message(ByteBuffer buffer, long sid) {$/;"	m	class:Message
+Message	src/main/java/com/techq/available/meta/Message.java	/^public class Message {$/;"	c
+Notification	src/main/java/com/techq/available/quorum/Notification.java	/^	Notification(mType type, long leader, long zxid, long electionEpoch, ServerState state,$/;"	m	class:Notification
+Notification	src/main/java/com/techq/available/quorum/Notification.java	/^public class Notification {$/;"	c
+OBSERVER	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^		PARTICIPANT, OBSERVER;$/;"	e	enum:QuorumPeer.LearnerType	file:
+PACKETMAXSIZE	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	static final int PACKETMAXSIZE = 1024 * 1024;$/;"	f	class:ElectionCnxManagerImpl
+PARTICIPANT	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^		PARTICIPANT, OBSERVER;$/;"	e	enum:QuorumPeer.LearnerType	file:
+ProposalVote	src/main/java/com/techq/available/quorum/ProposalVote.java	/^public class ProposalVote {$/;"	c
+QuorumPeer	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^public class QuorumPeer extends Thread {$/;"	c
+QuorumServer	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^		public QuorumServer(long id, InetSocketAddress addr) {$/;"	m	class:QuorumPeer.QuorumServer
+QuorumServer	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^		public QuorumServer(long id, InetSocketAddress addr, InetSocketAddress electionAddr) {$/;"	m	class:QuorumPeer.QuorumServer
+QuorumServer	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^		public QuorumServer(long id, InetSocketAddress addr, InetSocketAddress electionAddr,$/;"	m	class:QuorumPeer.QuorumServer
+QuorumServer	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	public static class QuorumServer {$/;"	c	class:QuorumPeer
+RECV_CAPACITY	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	static final int RECV_CAPACITY = 100;$/;"	f	class:ElectionCnxManagerImpl
+RecvWorker	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		RecvWorker(Socket sock, Long sid, SendWorker sw) {$/;"	m	class:ElectionCnxManagerImpl.RecvWorker
+RecvWorker	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	class RecvWorker extends Thread {$/;"	c	class:ElectionCnxManagerImpl
+SEND_CAPACITY	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	static final int SEND_CAPACITY = 1;$/;"	f	class:ElectionCnxManagerImpl
+SendWorker	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		SendWorker(Socket sock, Long sid) {$/;"	m	class:ElectionCnxManagerImpl.SendWorker
+SendWorker	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	class SendWorker extends Thread {$/;"	c	class:ElectionCnxManagerImpl
+ServerState	src/main/java/com/techq/available/quorum/ServerState.java	/^public enum ServerState {$/;"	g
+Vote	src/main/java/com/techq/available/quorum/Vote.java	/^    public Vote(long id, long zxid, long electionEpoch, long peerEpoch, ServerState state) {$/;"	m	class:Vote
+Vote	src/main/java/com/techq/available/quorum/Vote.java	/^public class Vote {$/;"	c
+acceptedEpoch	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	private long acceptedEpoch = -1;$/;"	f	class:QuorumPeer	file:
+ack	src/main/java/com/techq/available/quorum/Notification.java	/^		crequest, challenge, notification, ack$/;"	e	enum:Notification.mType	file:
+addToRecvQueue	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public void addToRecvQueue(Message msg) {$/;"	m	class:ElectionCnxManagerImpl
+addToSendQueue	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	private void addToSendQueue(ArrayBlockingQueue<ByteBuffer> queue, ByteBuffer buffer) {$/;"	m	class:ElectionCnxManagerImpl	file:
+addr	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^		public InetSocketAddress addr;$/;"	f	class:QuorumPeer.QuorumServer
+addr	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	public InetSocketAddress addr;$/;"	f	class:QuorumPeer
+buffer	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		ByteBuffer buffer;$/;"	f	class:ElectionCnxManagerImpl.Message
+buffer	src/main/java/com/techq/available/meta/Message.java	/^	ByteBuffer buffer;$/;"	f	class:Message
+challenge	src/main/java/com/techq/available/quorum/Notification.java	/^		crequest, challenge, notification, ack$/;"	e	enum:Notification.mType	file:
+closeSocket	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	private void closeSocket(Socket sock) {$/;"	m	class:ElectionCnxManagerImpl	file:
+cnxTO	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	private int cnxTO = 5000;$/;"	f	class:ElectionCnxManagerImpl	file:
+com.techq.available	src/main/java/com/techq/available/App.java	/^package com.techq.available;$/;"	p
+com.techq.available	src/test/java/com/techq/available/AppTest.java	/^package com.techq.available;$/;"	p
+com.techq.available.connector	src/main/java/com/techq/available/connector/ElectionCnxManager.java	/^package com.techq.available.connector;$/;"	p
+com.techq.available.connector.impl	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^package com.techq.available.connector.impl;$/;"	p
+com.techq.available.meta	src/main/java/com/techq/available/meta/Message.java	/^package com.techq.available.meta;$/;"	p
+com.techq.available.quorum	src/main/java/com/techq/available/quorum/LeaderElection.java	/^package com.techq.available.quorum;$/;"	p
+com.techq.available.quorum	src/main/java/com/techq/available/quorum/Notification.java	/^package com.techq.available.quorum;$/;"	p
+com.techq.available.quorum	src/main/java/com/techq/available/quorum/ProposalVote.java	/^package com.techq.available.quorum;$/;"	p
+com.techq.available.quorum	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^package com.techq.available.quorum;$/;"	p
+com.techq.available.quorum	src/main/java/com/techq/available/quorum/ServerState.java	/^package com.techq.available.quorum;$/;"	p
+com.techq.available.quorum	src/main/java/com/techq/available/quorum/Vote.java	/^package com.techq.available.quorum;$/;"	p
+connectAll	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public void connectAll() {$/;"	m	class:ElectionCnxManagerImpl
+connectOne	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	synchronized void connectOne(long sid) {$/;"	m	class:ElectionCnxManagerImpl
+crequest	src/main/java/com/techq/available/quorum/Notification.java	/^		crequest, challenge, notification, ack$/;"	e	enum:Notification.mType	file:
+curEpoch	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	private long curEpoch = -1;$/;"	f	class:QuorumPeer	file:
+curVote	src/main/java/com/techq/available/quorum/LeaderElection.java	/^	ProposalVote curVote;$/;"	f	class:LeaderElection
+din	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		DataInputStream din;$/;"	f	class:ElectionCnxManagerImpl.RecvWorker
+dout	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		DataOutputStream dout;$/;"	f	class:ElectionCnxManagerImpl.SendWorker
+electionAddr	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^		public InetSocketAddress electionAddr;$/;"	f	class:QuorumPeer.QuorumServer
+electionAddr	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	public InetSocketAddress electionAddr;$/;"	f	class:QuorumPeer
+electionEpoch	src/main/java/com/techq/available/quorum/Notification.java	/^	long electionEpoch;$/;"	f	class:Notification
+electionEpoch	src/main/java/com/techq/available/quorum/Vote.java	/^    final private long electionEpoch;$/;"	f	class:Vote	file:
+equals	src/main/java/com/techq/available/quorum/Vote.java	/^    public boolean equals(Object o) {$/;"	m	class:Vote
+finish	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		synchronized boolean finish() {$/;"	m	class:ElectionCnxManagerImpl.RecvWorker
+finish	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		synchronized boolean finish() {$/;"	m	class:ElectionCnxManagerImpl.SendWorker
+getAcceptedEpoch	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	public long getAcceptedEpoch() {$/;"	m	class:QuorumPeer
+getCurEpoch	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	public long getCurEpoch() {$/;"	m	class:QuorumPeer
+getElectionEpoch	src/main/java/com/techq/available/quorum/Vote.java	/^    public long getElectionEpoch() {$/;"	m	class:Vote
+getId	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	public long getId() {$/;"	m	class:QuorumPeer
+getId	src/main/java/com/techq/available/quorum/Vote.java	/^    public long getId() {$/;"	m	class:Vote
+getPeerEpoch	src/main/java/com/techq/available/quorum/Vote.java	/^    public long getPeerEpoch() {$/;"	m	class:Vote
+getQuorumPeer	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public QuorumPeer getQuorumPeer() {$/;"	m	class:ElectionCnxManagerImpl
+getRecvWorker	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		synchronized RecvWorker getRecvWorker() {$/;"	m	class:ElectionCnxManagerImpl.SendWorker
+getState	src/main/java/com/techq/available/quorum/Vote.java	/^    public ServerState getState() {$/;"	m	class:Vote
+getThreadCount	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public long getThreadCount() {$/;"	m	class:ElectionCnxManagerImpl
+getView	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	public Map<Long, QuorumPeer.QuorumServer> getView() {$/;"	m	class:QuorumPeer
+getVotingView	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	public Map<Long, QuorumPeer.QuorumServer> getVotingView() {$/;"	m	class:QuorumPeer
+getZxid	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	public long getZxid() {$/;"	m	class:QuorumPeer
+getZxid	src/main/java/com/techq/available/quorum/Vote.java	/^    public long getZxid() {$/;"	m	class:Vote
+halt	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		void halt() {$/;"	m	class:ElectionCnxManagerImpl.Listener
+halt	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public void halt() {$/;"	m	class:ElectionCnxManagerImpl
+hashCode	src/main/java/com/techq/available/quorum/Vote.java	/^    public int hashCode() {$/;"	m	class:Vote
+haveDelivered	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	boolean haveDelivered() {$/;"	m	class:ElectionCnxManagerImpl
+id	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^		public long id;$/;"	f	class:QuorumPeer.QuorumServer
+id	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	private long id = -1;$/;"	f	class:QuorumPeer	file:
+id	src/main/java/com/techq/available/quorum/Vote.java	/^    final private long id;$/;"	f	class:Vote	file:
+initiateConnection	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public boolean initiateConnection(Socket sock, Long sid) {$/;"	m	class:ElectionCnxManagerImpl
+isSendQueueEmpty	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	private boolean isSendQueueEmpty(ArrayBlockingQueue<ByteBuffer> queue) {$/;"	m	class:ElectionCnxManagerImpl	file:
+lastMessageSent	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	final ConcurrentHashMap<Long, ByteBuffer> lastMessageSent;$/;"	f	class:ElectionCnxManagerImpl
+leader	src/main/java/com/techq/available/quorum/Notification.java	/^	long leader;$/;"	f	class:Notification
+listener	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public final Listener listener;$/;"	f	class:ElectionCnxManagerImpl
+logicalclock	src/main/java/com/techq/available/quorum/ProposalVote.java	/^	public volatile long logicalclock; \/* Election instance *\/$/;"	f	class:ProposalVote
+lookForLeader	src/main/java/com/techq/available/quorum/LeaderElection.java	/^	public void lookForLeader() {$/;"	m	class:LeaderElection
+mType	src/main/java/com/techq/available/quorum/Notification.java	/^	public static enum mType {$/;"	g	class:Notification
+main	src/main/java/com/techq/available/App.java	/^    public static void main( String[] args )$/;"	m	class:App
+needUpdate	src/main/java/com/techq/available/quorum/LeaderElection.java	/^	private boolean needUpdate(Vote newVote) {$/;"	m	class:LeaderElection	file:
+notification	src/main/java/com/techq/available/quorum/Notification.java	/^		crequest, challenge, notification, ack$/;"	e	enum:Notification.mType	file:
+observerCounter	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	private long observerCounter = -1;$/;"	f	class:ElectionCnxManagerImpl	file:
+offerSendQueue	src/main/java/com/techq/available/connector/ElectionCnxManager.java	/^	public void offerSendQueue(long sid, ByteBuffer buffer);$/;"	m	interface:ElectionCnxManager
+outofelection	src/main/java/com/techq/available/quorum/LeaderElection.java	/^	HashMap<Long, Vote> outofelection = new HashMap<Long, Vote>();$/;"	f	class:LeaderElection
+peerEpoch	src/main/java/com/techq/available/quorum/Vote.java	/^    final private long peerEpoch;$/;"	f	class:Vote	file:
+pollRecvQueue	src/main/java/com/techq/available/connector/ElectionCnxManager.java	/^	public Message pollRecvQueue(long time, TimeUnit unit);$/;"	m	interface:ElectionCnxManager
+pollRecvQueue	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public Message pollRecvQueue(long timeout, TimeUnit unit) throws InterruptedException {$/;"	m	class:ElectionCnxManagerImpl
+pollSendQueue	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	private ByteBuffer pollSendQueue(ArrayBlockingQueue<ByteBuffer> queue, long timeout, TimeUnit unit)$/;"	m	class:ElectionCnxManagerImpl	file:
+proposedEpoch	src/main/java/com/techq/available/quorum/ProposalVote.java	/^	public long proposedEpoch;$/;"	f	class:ProposalVote
+proposedLeader	src/main/java/com/techq/available/quorum/ProposalVote.java	/^	public long proposedLeader;$/;"	f	class:ProposalVote
+proposedZxid	src/main/java/com/techq/available/quorum/ProposalVote.java	/^	public long proposedZxid;$/;"	f	class:ProposalVote
+queueSendMap	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	final ConcurrentHashMap<Long, ArrayBlockingQueue<ByteBuffer>> queueSendMap;$/;"	f	class:ElectionCnxManagerImpl
+quorumPeers	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	public Map<Long, QuorumServer> quorumPeers;$/;"	f	class:QuorumPeer
+receiveConnection	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public boolean receiveConnection(Socket sock) {$/;"	m	class:ElectionCnxManagerImpl
+recvQLock	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	private final Object recvQLock = new Object();$/;"	f	class:ElectionCnxManagerImpl	file:
+recvQueue	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public final ArrayBlockingQueue<Message> recvQueue;$/;"	f	class:ElectionCnxManagerImpl
+recvVotesSet	src/main/java/com/techq/available/quorum/LeaderElection.java	/^	HashMap<Long, Vote> recvVotesSet = new HashMap<Long, Vote>();$/;"	f	class:LeaderElection
+recvWorker	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		RecvWorker recvWorker;$/;"	f	class:ElectionCnxManagerImpl.SendWorker
+recvqueue	src/main/java/com/techq/available/quorum/LeaderElection.java	/^	LinkedBlockingQueue<Notification> recvqueue;$/;"	f	class:LeaderElection
+run	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		public void run() {$/;"	m	class:ElectionCnxManagerImpl.Listener
+run	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		public void run() {$/;"	m	class:ElectionCnxManagerImpl.RecvWorker
+run	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		public void run() {$/;"	m	class:ElectionCnxManagerImpl.SendWorker
+running	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		volatile boolean running = true;$/;"	f	class:ElectionCnxManagerImpl.RecvWorker
+running	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		volatile boolean running = true;$/;"	f	class:ElectionCnxManagerImpl.SendWorker
+self	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	final QuorumPeer self;$/;"	f	class:ElectionCnxManagerImpl
+self	src/main/java/com/techq/available/quorum/LeaderElection.java	/^	QuorumPeer self;$/;"	f	class:LeaderElection
+send	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		synchronized void send(ByteBuffer b) throws IOException {$/;"	m	class:ElectionCnxManagerImpl.SendWorker
+sendNotifications	src/main/java/com/techq/available/quorum/LeaderElection.java	/^	private void sendNotifications() {$/;"	m	class:LeaderElection	file:
+senderWorkerMap	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	final ConcurrentHashMap<Long, SendWorker> senderWorkerMap;$/;"	f	class:ElectionCnxManagerImpl
+sendqueue	src/main/java/com/techq/available/quorum/LeaderElection.java	/^	LinkedBlockingQueue<Notification> sendqueue;$/;"	f	class:LeaderElection
+setRecv	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		synchronized void setRecv(RecvWorker recvWorker) {$/;"	m	class:ElectionCnxManagerImpl.SendWorker
+setSockOpts	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	private void setSockOpts(Socket sock) throws SocketException {$/;"	m	class:ElectionCnxManagerImpl	file:
+shutdown	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	boolean shutdown = false;$/;"	f	class:ElectionCnxManagerImpl
+sid	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		Long sid;$/;"	f	class:ElectionCnxManagerImpl.RecvWorker
+sid	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		Long sid;$/;"	f	class:ElectionCnxManagerImpl.SendWorker
+sid	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		long sid;$/;"	f	class:ElectionCnxManagerImpl.Message
+sid	src/main/java/com/techq/available/meta/Message.java	/^	long sid;$/;"	f	class:Message
+sid	src/main/java/com/techq/available/quorum/Notification.java	/^	long sid;$/;"	f	class:Notification
+sock	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		Socket sock;$/;"	f	class:ElectionCnxManagerImpl.RecvWorker
+sock	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		Socket sock;$/;"	f	class:ElectionCnxManagerImpl.SendWorker
+softHalt	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public void softHalt() {$/;"	m	class:ElectionCnxManagerImpl
+ss	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		volatile ServerSocket ss = null;$/;"	f	class:ElectionCnxManagerImpl.Listener
+state	src/main/java/com/techq/available/quorum/Notification.java	/^	ServerState state;$/;"	f	class:Notification
+state	src/main/java/com/techq/available/quorum/Vote.java	/^    final private ServerState state;$/;"	f	class:Vote	file:
+suite	src/test/java/com/techq/available/AppTest.java	/^    public static Test suite()$/;"	m	class:AppTest
+sw	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^		final SendWorker sw;$/;"	f	class:ElectionCnxManagerImpl.RecvWorker
+syncLimit	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	public long syncLimit;$/;"	f	class:QuorumPeer
+testApp	src/test/java/com/techq/available/AppTest.java	/^    public void testApp()$/;"	m	class:AppTest
+testInitiateConnection	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public void testInitiateConnection(long sid) throws Exception {$/;"	m	class:ElectionCnxManagerImpl
+threadCnt	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	private AtomicInteger threadCnt = new AtomicInteger(0);$/;"	f	class:ElectionCnxManagerImpl	file:
+tickTime	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	public long tickTime;$/;"	f	class:QuorumPeer
+toSend	src/main/java/com/techq/available/connector/impl/ElectionCnxManagerImpl.java	/^	public void toSend(Long sid, ByteBuffer b) {$/;"	m	class:ElectionCnxManagerImpl
+toString	src/main/java/com/techq/available/quorum/Vote.java	/^    public String toString() {$/;"	m	class:Vote
+type	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^		public LearnerType type = LearnerType.PARTICIPANT;$/;"	f	class:QuorumPeer.QuorumServer
+validateNotification	src/main/java/com/techq/available/quorum/LeaderElection.java	/^	private boolean validateNotification() {$/;"	m	class:LeaderElection	file:
+zxid	src/main/java/com/techq/available/quorum/Notification.java	/^	long zxid;$/;"	f	class:Notification
+zxid	src/main/java/com/techq/available/quorum/QuorumPeer.java	/^	private long zxid = -1;$/;"	f	class:QuorumPeer	file:
+zxid	src/main/java/com/techq/available/quorum/Vote.java	/^    final private long zxid;$/;"	f	class:Vote	file:

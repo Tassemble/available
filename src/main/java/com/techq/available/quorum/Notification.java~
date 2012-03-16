@@ -1,0 +1,284 @@
+package com.techq.available.quorum;
+
+import java.nio.ByteBuffer;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class Notification {
+	static Logger LOG = LoggerFactory.getLogger(Notification.class);
+	public static enum mType {
+		DISAGREE, PROPOSE, ACCEPT, AGREEMENT, UNKNOW, PING, ACK, CONFIRM
+	}
+	int seq = 0;
+
+
+	public Notification(mType type, long leader, long zxid, long logicalClock, ServerState state,
+			long sid, long from) {
+		this.type = type; 
+		this.leader = leader;
+		this.zxid = zxid;
+		this.logicalClock = logicalClock;
+		this.state = state;
+		this.sid = sid;
+		this.from = from;
+	}
+	
+	public Notification() {};
+	
+	public static mType getTypeByInt(int val) {
+		mType type;
+		switch(val) {
+		//DISAGREE, PROPOSE, ACCEPT, AGREEMENT, UNKNOW
+		case 0:
+			type = Notification.mType.DISAGREE;
+			break;
+		case 1:
+			type = Notification.mType.PROPOSE;
+			break;
+		case 2:
+			type = Notification.mType.ACCEPT;
+			break;
+		case 3:
+			LOG.info("find it");
+			type = Notification.mType.AGREEMENT;
+			break;
+		case 4:
+			type = Notification.mType.UNKNOW;
+			break;
+		case 5:
+			type = Notification.mType.PING;
+			break;
+		case 6:
+			type = Notification.mType.ACK;
+			break;
+		case 7:
+			type = Notification.mType.CONFIRM;
+			break;
+		default:
+			LOG.error("what's this? value:" + val);
+			type = Notification.mType.UNKNOW;
+			break;
+		}
+		return type;
+	}
+	
+	public static ServerState getStateByInt(int val) {
+		switch (val) {
+		case 0:
+			return ServerState.LOOKING;
+		case 1:
+			return ServerState.FOLLOWING;
+		case 2:
+			return ServerState.LEADING;
+		default:
+			return null;
+		}
+	}
+	
+	
+	public ByteBuffer toBuffer() {
+		int len = DebugConfig.debug ? Message.DEFAULT_SIZE + 4 : Message.DEFAULT_SIZE;
+		byte requestBytes[] = new byte[len];
+		ByteBuffer requestBuffer = ByteBuffer.wrap(requestBytes);
+
+		/*
+		 * Building notification packet to send
+		 */
+
+		
+		/**
+		 * int 4byte long 4 * 8 byte
+		 * total bytes: 36bytes
+		 */
+		requestBuffer.clear();
+		requestBuffer.putInt(this.type.ordinal());
+		requestBuffer.putInt(this.state.ordinal());
+		requestBuffer.putLong(this.leader);
+		requestBuffer.putLong(this.zxid);
+		requestBuffer.putLong(this.logicalClock);
+		requestBuffer.putLong(this.from);//from which peer
+		if (DebugConfig.debug) {
+			requestBuffer.putInt(this.seq);
+		}
+		return requestBuffer;
+	}
+	
+
+	mType type;
+	/*
+	 * Proposed leader in the case of notification
+	 */
+	long leader;
+	
+	/*
+	 * id contains the tag for acks, and zxid for notifications
+	 */
+	long zxid;
+
+	/*
+	 * Epoch
+	 */
+	long logicalClock;
+
+	/*
+	 * Current state;
+	 */
+	ServerState state;
+
+	/*
+	 * Address of recipient
+	 */
+	long sid;
+	
+	
+	long from;
+
+
+	
+	
+	
+
+	public int getSeq() {
+		return seq;
+	}
+
+	public void setSeq(int seq) {
+		this.seq = seq;
+	}
+
+
+	
+	@Override
+	public String toString() {
+		if (DebugConfig.debug) {
+			return "Notification [type=" + type + ", leader=" + leader + ", zxid="
+			+ zxid + ", logicalClock=" + logicalClock + ", state=" + state
+			+ ", sid=" + sid + ", from=" + from + ", seq=" + seq + "]";
+		}
+		return "Notification [type=" + type + ", leader=" + leader + ", zxid="
+				+ zxid + ", logicalClock=" + logicalClock + ", state=" + state
+				+ ", sid=" + sid + ", from=" + from + "]";
+	}
+
+	public mType getType() {
+		return type;
+	}
+
+
+
+
+
+	public void setType(mType type) {
+		this.type = type;
+	}
+
+
+
+
+
+	public long getLeader() {
+		return leader;
+	}
+
+
+
+
+
+	public void setLeader(long leader) {
+		this.leader = leader;
+	}
+
+
+
+
+
+	public long getZxid() {
+		return zxid;
+	}
+
+
+
+
+
+	public void setZxid(long zxid) {
+		this.zxid = zxid;
+	}
+
+
+
+
+
+	public long getLogicalClock() {
+		return logicalClock;
+	}
+
+
+
+
+
+	public void setLogicalClock(long logicalClock) {
+		this.logicalClock = logicalClock;
+	}
+
+
+
+
+
+	public ServerState getState() {
+		return state;
+	}
+
+
+
+
+
+	public void setState(ServerState state) {
+		this.state = state;
+	}
+
+
+
+
+
+	public long getSid() {
+		return sid;
+	}
+
+
+
+
+
+	public void setSid(long sid) {
+		this.sid = sid;
+	}
+
+
+
+
+
+	public long getFrom() {
+		return from;
+	}
+
+
+
+
+
+	public void setFrom(long from) {
+		this.from = from;
+	}
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+}
