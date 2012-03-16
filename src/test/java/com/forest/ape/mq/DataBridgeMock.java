@@ -4,7 +4,7 @@ import java.util.Random;
 
 import org.slf4j.*;
 
-public class DataBridgeMock implements DataBridge {
+public class DataBridgeMock implements InBridge {
 	Logger LOG = LoggerFactory.getLogger(DataBridgeMock.class);
 	Random r = new Random(System.currentTimeMillis());
 	

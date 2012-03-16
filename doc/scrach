@@ -1,0 +1,22 @@
+1. first time 
+
+	sid=1 ---> when it becames to be leader, what MQ will do?
+		1. create several queues, for example, create queue:opoch+sid
+	
+	sid=2 when connecting to leader, start listen to MQ queue and recv data
+	sid=3 when connecting to leader, start listen to MQ queue and recv data
+
+2. second time when leader failed
+	if sid = 1 failed, and after leader election, it recovery
+
+	we assume sid = 3 win the leader, then it wait to the other learners to sync with it
+
+	let's see what sid = 2 do
+		Probabely, the queue for sid = 2 may not be totally completed, so after electon,and before start subscribe to the next opoch+sid queue it should recv all data from MQ and delete queues,  so it means it should do 2 things: 1, recv all data  2. delete old queue
+		so here, we define 2 delete old queue, recv data
+
+	let's see what sid = 1 do when it recovery
+		1. may be old leader has some data to send, we should clear all these data
+		2. may be old leader may send one msg to MQ, but it failed before it recv ack. So, the mq should ignore this msg, but mq won't. So may be client to send it again
+		we should gurarety that client repeat msg won't make system down
+

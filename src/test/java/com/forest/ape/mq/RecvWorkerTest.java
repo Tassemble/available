@@ -15,6 +15,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.slf4j.*;
 
+import com.forest.ape.mq.impl.RecvWorker;
 import com.rabbitmq.client.*;
 
 public class RecvWorkerTest {

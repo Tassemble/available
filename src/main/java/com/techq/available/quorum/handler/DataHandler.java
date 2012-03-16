@@ -7,7 +7,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.forest.ape.mq.SendWorkerMQ;
+import com.forest.ape.mq.impl.SendWorkerMQ;
 import com.techq.available.AvailableConfig;
 import com.techq.available.data.BasicPacket;
 

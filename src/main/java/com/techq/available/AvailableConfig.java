@@ -4,10 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 7f07c6a4e19dc6688904844dfd3ea6d1358c0955
 /**
  * 
  * @author CHQ

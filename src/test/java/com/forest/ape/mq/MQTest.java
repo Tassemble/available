@@ -4,6 +4,8 @@ import java.nio.ByteBuffer;
 
 import org.junit.Test;
 
+import com.forest.ape.mq.impl.SendWorkerMQ;
+
 public class MQTest {
 
 	@Test

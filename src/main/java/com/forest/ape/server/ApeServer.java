@@ -5,7 +5,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-import com.forest.ape.mq.SendWorkerMQ;
+import com.forest.ape.mq.impl.SendWorkerMQ;
 import com.forest.ape.nio.ServerCnxn;
 import com.forest.ape.server.persistence.Request;
 import com.techq.available.data.BasicPacket;
