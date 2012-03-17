@@ -38,17 +38,12 @@ public class RecvWorker extends Thread {
 	static Address[] addrArr;
 	InBridge dataHelper;
 	int retry = 0;
-	
+	Connection conn;
+	Channel ch;
 	static {
 		RecvWorker.loadConfig();
 	}
 
-	public RecvWorker(List<String> asList, Address[] addrArr,
-			InBridge dataHelper) {
-		super();
-		this.dataHelper = dataHelper;
-		connectionFactory = new ConnectionFactory();
-	}
 
 	public RecvWorker(String Id, String epoch) {
 		super("RecvWorker");
@@ -59,8 +54,8 @@ public class RecvWorker extends Thread {
 
 	public void run() {
 		try {
-			Connection conn = connectionFactory.newConnection(addrArr);
-			Channel ch = conn.createChannel();
+			conn = connectionFactory.newConnection(addrArr);
+			ch = conn.createChannel();
 			Map<String, Object> haPolicy = new HashMap<String, Object>();
 			haPolicy.put("x-ha-policy", "nodes");
 			haPolicy.put("x-ha-policy-params", asList);
@@ -100,9 +95,9 @@ public class RecvWorker extends Thread {
 							+ delivery.getEnvelope().getDeliveryTag());
 				}
 			}
-			ch.close();
-			conn.close();
-		} catch (Throwable e) {
+		} catch (InterruptedException e) {
+			LOG.warn("", e);
+		}catch (Throwable e) {
 			LOG.error("Whoosh!", e);
 		}
 	}
@@ -112,9 +107,11 @@ public class RecvWorker extends Thread {
 		ch.queueDelete(queueName);
 	}
 
-	public void shutdown() {
+	public void shutdown() throws IOException {
 		isRunning = false;
 		this.interrupt();
+		ch.close();
+		conn.close();
 	}
 
 	public static void loadConfig() {

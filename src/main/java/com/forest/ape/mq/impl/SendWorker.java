@@ -43,12 +43,13 @@ public class SendWorker extends Thread {
 	int retry = 0;
 	static boolean enableHA = false;
 	String topic = "#";
-	private volatile SortedSet<Long> unconfirmedSet = Collections
-			.synchronizedSortedSet(new TreeSet());
+//	private volatile SortedSet<Long> unconfirmedSet = Collections
+//			.synchronizedSortedSet(new TreeSet());
 	private BlockingQueue<MQPacket> outstandingQueue = new LinkedBlockingDeque<MQPacket>();
 	OutBridge bridge;
 	String epoch;
-	
+	Connection conn;
+	Channel ch;
 	static {
 		SendWorker.loadConfig();
 	}
@@ -76,8 +77,8 @@ public class SendWorker extends Thread {
 		try {
 			// Setup
 			LOG.info("start sendworker...");
-			Connection conn = connectionFactory.newConnection(addrArr);
-			Channel ch = conn.createChannel();
+			conn = connectionFactory.newConnection(addrArr);
+			ch = conn.createChannel();
 			// x-ha-policy
 
 			Map<String, Object> haPolicy = new HashMap<String, Object>();
@@ -93,7 +94,7 @@ public class SendWorker extends Thread {
 			// sec durable
 			ch.exchangeDeclare(EXCHANGE, "topic", true);
 
-			ch.addConfirmListener(new ConfirmListenerHandler());
+//			ch.addConfirmListener(new ConfirmListenerHandler());
 
 			ch.confirmSelect();
 
@@ -109,11 +110,10 @@ public class SendWorker extends Thread {
 					packet.handler.handleAck(ch.waitForConfirms());
 				}
 			}
-			ch.waitForConfirmsOrDie();
+//			ch.waitForConfirmsOrDie();
 
-			ch.close();
-			conn.close();
-
+		} catch (InterruptedException e) {
+			LOG.warn("", e);
 		} catch (Throwable e) {
 			LOG.info("foobar", e);
 		}
@@ -144,35 +144,35 @@ public class SendWorker extends Thread {
 
 	}
 
-	class ConfirmListenerHandler implements ConfirmListener {
-
-
-		public void handleAck(long seqNo, boolean multiple) {
-			if (multiple) {
-				unconfirmedSet.headSet(seqNo + 1).clear();
-			} else {
-				unconfirmedSet.remove(seqNo);
-			}
-		}
-
-		public void handleNack(long seqNo, boolean multiple) {
-			// handle the lost messages somehow
-		}
-	}
+//	class ConfirmListenerHandler implements ConfirmListener {
+//
+//
+//		public void handleAck(long seqNo, boolean multiple) {
+//			if (multiple) {
+//				unconfirmedSet.headSet(seqNo + 1).clear();
+//			} else {
+//				unconfirmedSet.remove(seqNo);
+//			}
+//		}
+//
+//		public void handleNack(long seqNo, boolean multiple) {
+//			// handle the lost messages somehow
+//		}
+//	}
 	
 	
-	public void shutdown() throws InterruptedException {
+	public void shutdown() throws InterruptedException, IOException {
 		LOG.warn("#shutdown#:mq sender");
 		throttle = true;
 		
 		while(outstandingQueue.size() > 0) {
-//			synchronized (this) {
-//				wait();
-//			}
 			TimeUnit.SECONDS.sleep(1);
 		}
 		isRunning = false;
 		this.interrupt();
+		
+		ch.close();
+		conn.close();
 	}
 	
 	public static void loadConfig() {
