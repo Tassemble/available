@@ -1,9 +1,13 @@
 
 
-
-
+#Use for FileTrackImpl.java create nodes
+RootDir=D:/WorkStaff/git/works/share-projects/opensource/available
 ServerID=1
+
+#Use for client connection
 ClientPort=7654
+
+#Use for RabbitMQ
 MQClusterAddrs=172.17.2.55:5672;172.17.2.55:5673;172.17.2.55:5674
 MQCluster-ha-policy=false;hare,rabbit;
 

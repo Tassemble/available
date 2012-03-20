@@ -1,0 +1,2 @@
+isql.bat -h 172.17.2.47 -ufs_product -pfs_product -o 8888
+select * from FS_FileState where docid = 671317819454933961 \g; 

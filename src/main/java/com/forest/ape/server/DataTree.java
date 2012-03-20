@@ -18,7 +18,10 @@
 
 package com.forest.ape.server;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,6 +32,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.FileHandler;
 
 import java.nio.ByteBuffer;
 
@@ -45,6 +49,8 @@ import com.forest.ape.data.StatPersisted;
 import com.forest.ape.exception.ApeException;
 import com.forest.ape.server.ZooDefs.Ids;
 import com.forest.ape.server.ZooDefs.OpCode;
+import com.forest.ape.server.persistence.FileTracker;
+import com.forest.ape.server.persistence.FileTrackerImpl;
 import com.forest.ape.txn.CheckVersionTxn;
 import com.forest.ape.txn.CreateTxn;
 import com.forest.ape.txn.DeleteTxn;
@@ -67,6 +73,12 @@ import com.forest.ape.txn.TxnHeader;
 public class DataTree {
 	private static final Logger LOG = LoggerFactory.getLogger(DataTree.class);
 
+	/**
+	 * track all file handlers
+	 */
+	FileTracker tracker = new FileTrackerImpl();
+	
+	
 	/**
 	 * This hashtable provides a fast lookup to the datanodes. The tree is the
 	 * source of truth and is where all the locking occurs
@@ -268,21 +280,20 @@ public class DataTree {
 	 * This is a pointer to the root of the DataTree. It is the source of truth,
 	 * but we usually use the nodes hashmap to find nodes in the tree.
 	 */
-	private DataNode root = new DataNode(null, new byte[0], -1L,
+	private DataNode root = new DataNode(null, -1L,
 			new StatPersisted());
 
 	/**
 	 * create a /zookeeper filesystem that is the proc filesystem of zookeeper
 	 */
-	private DataNode procDataNode = new DataNode(root, new byte[0], -1L,
+	private DataNode procDataNode = new DataNode(root, -1L,
 			new StatPersisted());
 
 	/**
 	 * create a /zookeeper/quota node for maintaining quota properties for
 	 * zookeeper
 	 */
-	private DataNode quotaDataNode = new DataNode(procDataNode, new byte[0],
-			-1L, new StatPersisted());
+	private DataNode quotaDataNode = new DataNode(procDataNode, -1L, new StatPersisted());
 
 	public DataTree() {
 		/* Rather than fight it, let root have an alias */
@@ -441,7 +452,8 @@ public class DataTree {
 			parent.stat.setCversion(parentCVersion);
 			parent.stat.setPzxid(zxid);
 			Long longval = convertAcls(acl);
-			DataNode child = new DataNode(parent, data, longval, stat);
+			DataNode child = new DataNode(parent, longval, stat);
+			tracker.addFileHandler(path, new FileTrackerImpl.ApeFileHandler(path));
 			parent.addChild(childName);
 			nodes.put(path, child);
 			if (ephemeralOwner != 0) {
@@ -476,6 +488,7 @@ public class DataTree {
 		 */
 		return path;
 	}
+	
 
 	/**
 	 * remove the path from the datatree
@@ -541,6 +554,7 @@ public class DataTree {
 		 */
 	}
 
+	@Deprecated
 	public Stat setData(String path, byte data[], int version, long zxid,
 			long time) throws ApeException.NoNodeException {
 		Stat s = new Stat();
@@ -552,6 +566,8 @@ public class DataTree {
 		synchronized (n) {
 			lastdata = n.data;
 			n.data = data;
+			FileTracker.FileHandler curHandler = tracker.getFileHandler(path);
+			
 			n.stat.setMtime(time);
 			n.stat.setMzxid(zxid);
 			n.stat.setVersion(version);
@@ -564,6 +580,24 @@ public class DataTree {
 		// - (lastdata == null ? 0 : lastdata.length));
 		// }
 		// dataWatches.triggerWatch(path, EventType.NodeDataChanged);
+		return s;
+	}
+	
+	public Stat appendData(String path, byte data[], int version, long zxid,
+			long time) throws ApeException.NoNodeException {
+		Stat s = new Stat();
+		DataNode n = nodes.get(path);
+		if (n == null) {
+			throw new ApeException.NoNodeException();
+		}
+		synchronized (n) {
+			FileTracker.FileHandler curHandler = tracker.getFileHandler(path);
+			curHandler.appendData(data);
+			n.stat.setMtime(time);
+			n.stat.setMzxid(zxid);
+			n.stat.setVersion(version);
+			n.copyStat(s);
+		}
 		return s;
 	}
 
@@ -589,6 +623,7 @@ public class DataTree {
 	// }
 	// }
 
+	@Deprecated
 	public byte[] getData(String path, Stat stat)
 			throws ApeException.NoNodeException {
 		DataNode n = nodes.get(path);
@@ -602,7 +637,23 @@ public class DataTree {
 			// }
 			return n.data;
 		}
-
+	}
+	
+	
+	public InputStream readData(String path, Stat stat)
+		throws ApeException.NoNodeException 
+		{
+			DataNode n = nodes.get(path);
+			if (n == null) {
+				throw new ApeException.NoNodeException();
+			}
+			synchronized (n) {
+				n.copyStat(stat);
+				// if (watcher != null) {
+			// dataWatches.addWatch(path, watcher);
+			// }
+				return tracker.getFileHandler(path).readData();
+			}
 	}
 
 	public Stat statNode(String path) throws ApeException.NoNodeException {

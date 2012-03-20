@@ -42,6 +42,7 @@ public class DataNode implements Record {
 
     /** the data for this datanode */
     byte data[];
+    
 
     /**
      * the acl map long for this datanode. the datatree has the map
@@ -79,9 +80,9 @@ public class DataNode implements Record {
      * @param stat
      *            the stat for this node.
      */
-    public DataNode(DataNode parent, byte data[], Long acl, StatPersisted stat) {
+    public DataNode(DataNode parent, Long acl, StatPersisted stat) {
         this.parent = parent;
-        this.data = data;
+        this.data = null;
         this.acl = acl;
         this.stat = stat;
     }

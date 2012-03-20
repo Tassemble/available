@@ -13,10 +13,10 @@ public class WorkerFactoryTest {
 
 	@Test
 	public void test() throws InterruptedException {
-		WorkerFactory leaderFactory = new WorkerFactory().buildByLeader("1", Arrays.asList("2", "3"), "520");
+		WorkerFactory leaderFactory = new WorkerFactory().buildByLeader("2", Arrays.asList("1", "3"), "521");
 		leaderFactory.start();
 		
-		WorkerFactory followerFactory = new WorkerFactory().buildByFollower("2", "520", new DefaultRecvCallableHandler());
+		WorkerFactory followerFactory = new WorkerFactory().buildByFollower("3", "521", new DefaultRecvCallableHandler());
 		followerFactory.start();
 		
 		

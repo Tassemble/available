@@ -21,9 +21,6 @@ import com.forest.ape.txn.TxnHeader;
 
 public class TxnLogTest {
 
-	
-	
-	
 	@Test
 	public void testFileTxnLog() throws IOException {
 //		TxnLog log = new FileTxnLog(new File("logDir"));
