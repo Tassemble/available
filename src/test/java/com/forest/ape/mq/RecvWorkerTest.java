@@ -46,15 +46,6 @@ public class RecvWorkerTest {
 		}
 		
 		values = (String) properties.get("MQCluster-ha-policy");
-		
-		RecvWorker worker = new RecvWorker(
-				Arrays.asList(values.split(";")),
-				//seems a problem
-				addrArr,
-				 new DataBridgeMock());
-		
-		
-		worker.start();
-		worker.join();
+	
 	}
 }

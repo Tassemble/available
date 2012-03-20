@@ -19,4 +19,11 @@
 		1. may be old leader has some data to send, we should clear all these data
 		2. may be old leader may send one msg to MQ, but it failed before it recv ack. So, the mq should ignore this msg, but mq won't. So may be client to send it again
 		we should gurarety that client repeat msg won't make system down
+		
+		
+		
+set ha-policy
+	1. if set ha-policy true, then nodes should be set nodename@hostname like hare@app-20 as same as the one declared in mq cluster
+		
+	2. 
 
