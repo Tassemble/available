@@ -6,6 +6,7 @@ import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicLong;
 import org.slf4j.*;
 import com.rabbitmq.client.*;
+import com.rabbitmq.client.AMQP.BasicProperties;
 
 /**
  * 
@@ -68,7 +69,7 @@ public class ProducersGaurd {
 	
 	class MessageProducer extends Thread {
 		final Logger LOG = LoggerFactory.getLogger(MessageProducer.class);
-		private BlockingQueue<MQPacket> outstandingQueue = new ArrayBlockingQueue<MQPacket>(100000);
+		private BlockingQueue<MQPacket> outstandingQueue = new LinkedBlockingDeque<MQPacket>();
 		volatile boolean isRunning = true;
 		Channel ch;
 		Connection conn;
@@ -138,7 +139,7 @@ public class ProducersGaurd {
 					MQPacket p = outstandingQueue.poll(1, TimeUnit.SECONDS);
 					if (p == null) {
 						idle++;
-						LOG.info("queue[" + queue + "] is idle[time="+idle+"]"); 
+						LOG.debug("queue[" + queue + "] is idle[time="+idle+"]"); 
 						if (idle == idleLimit) {
 							throttle = true;
 							LOG.info("close queue[" + queue + "] thread!");
@@ -149,7 +150,7 @@ public class ProducersGaurd {
 						idle = 0;
 					}
 //					MQPacket p = outstandingQueue.take();
-					ch.basicPublish(EXCHANGE_NAME, bindName, MessageProperties.PERSISTENT_BASIC, p.data);
+					ch.basicPublish(EXCHANGE_NAME, bindName, config.mp, p.data);
 					if (p.handler != null) {
 						p.handler.handleAck(ch.waitForConfirms());
 					}
@@ -201,8 +202,9 @@ public class ProducersGaurd {
 		Address[] addrArr;
 		boolean enableHA = false;
 		List<String> asList = null;
-		MessageProperties mp;
+		BasicProperties mp;
 		int queueIdleLimit = 60;
+		boolean persistent = true;
 		
 		public void loadConfig() {
 			try {
@@ -234,6 +236,16 @@ public class ProducersGaurd {
 					LOG.info("disable HA");
 				}
 				queueIdleLimit  = Integer.valueOf((value = p.get("QueueIdle")) != null ? value.toString() : null);
+				LOG.info("Queue Idle Limit is " + queueIdleLimit);
+				
+				
+				persistent  = Boolean.valueOf((value = p.get("Persistent")) != null ? value.toString() : null);
+				LOG.info("Queue persistent is " + persistent);
+				if (persistent == true)
+					mp = MessageProperties.PERSISTENT_BASIC;
+				else {
+					mp = MessageProperties.BASIC;
+				}
 			} catch (Throwable e) {
 				LOG.error("config parse error!", e);
 			}

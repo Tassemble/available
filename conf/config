@@ -12,7 +12,10 @@ MQClusterAddrs=172.17.2.55:5672;172.17.2.55:5673;172.17.2.55:5674
 MQCluster-ha-policy=false;hare@app-20,rabbit@app-20;
 
 #Use for queue idle limit(seconds)
-QueueIdle=5
+QueueIdle=60
+
+#Use for persistent message
+Persistent=false
 
 
 

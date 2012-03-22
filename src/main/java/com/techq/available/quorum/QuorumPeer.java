@@ -249,67 +249,8 @@ public class QuorumPeer extends Thread {
 				
 				break;
 			}
-/*			try {
-				TimeUnit.SECONDS.sleep(1);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}*/
 		}
-		
-		
-		
-	}
-	
-
-	private void ping() throws InterruptedException {
-
-		HashMap<Long, Notification> quorumsPing = new HashMap<Long, Notification>();
-		while (quorumsPing.size() * 2 > quorumPeers.size()) {
-			Notification n = election.pollConfirm(200, TimeUnit.MILLISECONDS);
-			if (n.type.equals(Notification.mType.ACK))
-				quorumsPing.put(n.sid, n);
-		}
-		for (Long sid : this.getViews().keySet()) {
-			Notification n = new Notification(Notification.mType.PING,
-					this.curVote.proposedLeader, zxid, logicalClock, state,
-					sid, this.getId());
-			election.offerACK(n);
-		}
-	}
-	
-	private byte[] readPacket() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	private void restartVoting() throws InterruptedException {
-		LOG.warn("restart electing... after 20s");
-		TimeUnit.SECONDS.sleep(20);
-		this.setPeerState(ServerState.LOOKING);
-	}
-	private void startingAgreement(final Map<Long, Notification> quorums,
-			final Vote candidate) {
-		new Thread() {
-			public void run() {
-				while (isGoingOn) {
-					Notification n;
-					try {
-						n = election.pollConfirm(200, TimeUnit.MILLISECONDS);
-						if (n != null && n.type.equals(Notification.mType.AGREEMENT)) {
-							quorums.put(n.from, n);
-							LOG.info("reach agreement with quoroms");
-						}
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-
-				}
-			}
-		}.start();
-		
-	}
-	
+	}	
 	
 	public boolean synced() {
 		return this.tick <= this.syncLimit;
