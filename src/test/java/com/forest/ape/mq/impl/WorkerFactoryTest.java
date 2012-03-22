@@ -2,6 +2,7 @@ package com.forest.ape.mq.impl;
 
 import java.util.Arrays;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -11,6 +12,7 @@ import org.junit.Test;
  */
 public class WorkerFactoryTest {
 
+	@Ignore
 	@Test
 	public void test() throws InterruptedException {
 		WorkerFactory leaderFactory = new WorkerFactory().buildByLeader("2", Arrays.asList("1", "3"), "521");

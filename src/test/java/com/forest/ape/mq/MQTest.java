@@ -2,12 +2,14 @@ package com.forest.ape.mq;
 
 import java.nio.ByteBuffer;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.forest.ape.mq.impl.SendWorkerMQ;
 
 public class MQTest {
 
+	@Ignore
 	@Test
 	public void testSendWorkerMQ() throws Exception {
 		SendWorkerMQ worker = SendWorkerMQ.createMQWorker();

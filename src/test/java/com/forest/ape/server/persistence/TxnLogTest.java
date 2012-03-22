@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.forest.ape.data.ACL;
@@ -21,6 +22,7 @@ import com.forest.ape.txn.TxnHeader;
 
 public class TxnLogTest {
 
+	@Ignore
 	@Test
 	public void testFileTxnLog() throws IOException {
 //		TxnLog log = new FileTxnLog(new File("logDir"));

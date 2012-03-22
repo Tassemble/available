@@ -2,6 +2,7 @@ package com.techq.available.quorum.handler;
 
 import java.io.IOException;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +16,7 @@ public class FollowingLeaderHandlerTest {
 
 	private static final Logger LOG = LoggerFactory.getLogger(FollowerHandlerTest.class);
 	
+	@Ignore
 	@Test
 	public void test() throws InterruptedException, IOException {
 		Election election = new FollowerElectionStub();

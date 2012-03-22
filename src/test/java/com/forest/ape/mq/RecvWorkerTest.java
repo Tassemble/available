@@ -12,6 +12,7 @@ import java.util.Properties;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.*;
 
@@ -22,11 +23,13 @@ public class RecvWorkerTest {
 	Logger LOG = LoggerFactory.getLogger(RecvWorkerTest.class);
 		
 	
+	@Ignore
 	@BeforeClass
 	public static void setup() {
 		PropertyConfigurator.configure("conf/log4j.properties");
 	}
 	
+	@Ignore
 	@Test
 	public void recvWorkerTest() throws InterruptedException, UnsupportedEncodingException, FileNotFoundException, IOException {
 		Properties properties = new Properties();

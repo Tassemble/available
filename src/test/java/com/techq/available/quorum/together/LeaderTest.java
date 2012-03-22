@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import junit.framework.Assert;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +22,7 @@ import com.techq.available.quorum.handler.LearnerHandler;
 
 public class LeaderTest {
 	private static final Logger LOG = LoggerFactory.getLogger(LeaderTest.class);
+	@Ignore
 	@Test
 	public void test() throws Exception {
 		Election election = new TogetherElectionStub();
@@ -42,7 +44,7 @@ public class LeaderTest {
 		}
 	}
 	
-	
+	@Ignore
 	@Test
 	public void test1() throws Exception {
 		Set<Long> followers = new HashSet<Long>();

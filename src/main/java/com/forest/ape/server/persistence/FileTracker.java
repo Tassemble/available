@@ -24,7 +24,11 @@ public interface FileTracker {
 	
 	FileHandler createFileHandler(String path) throws NodeExistsException;
 	
+	
 	void addFileHandler(String path, FileHandler h) throws NodeExistsException;
+	
+	
+	void removeFileHandler(String path) throws NoNodeException;
 	
 	boolean existPath(String path) throws IOException;
 	

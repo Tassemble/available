@@ -2,6 +2,7 @@ package com.techq.available.quorum.handler;
 
 import junit.framework.Assert;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +18,7 @@ import com.techq.available.rubbish.FollowerHandler3;
 public class FollowerHandlerTest {
 	private static final Logger LOG = LoggerFactory.getLogger(FollowerHandlerTest.class);
 	
+	@Ignore
 	@Test
 	public void test() {
 		Election election = new ElectionStub();

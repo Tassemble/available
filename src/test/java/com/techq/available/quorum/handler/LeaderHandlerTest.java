@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import junit.framework.Assert;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.techq.available.quorum.Election;
@@ -19,6 +20,7 @@ import com.techq.available.quorum.ServerState;
 
 public class LeaderHandlerTest {
 
+	@Ignore
 	@Test
 	public void test() throws Exception {
 		Election election = new LeaderElectionStub();

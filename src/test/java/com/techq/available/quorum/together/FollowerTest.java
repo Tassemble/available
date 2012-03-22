@@ -3,6 +3,7 @@ package com.techq.available.quorum.together;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +16,7 @@ import com.techq.available.quorum.handler.Follower;
 
 public class FollowerTest {
 
+	@Ignore
 	@Test
 	public void test() throws InterruptedException, IOException {
 		Election election = new TogetherElectionStub();
@@ -24,6 +26,7 @@ public class FollowerTest {
 		handler.followLeader();
 	}
 	
+	@Ignore
 	@Test
 	public void test1() throws InterruptedException, IOException {
 		InetSocketAddress addr = new InetSocketAddress(1111);
@@ -31,7 +34,7 @@ public class FollowerTest {
 		handler.followLeader();
 	}
 	
-	
+	@Ignore
 	@Test
 	public void test2() throws InterruptedException, IOException {
 		InetSocketAddress addr = new InetSocketAddress(1111);

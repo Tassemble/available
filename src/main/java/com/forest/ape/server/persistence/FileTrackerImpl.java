@@ -52,6 +52,14 @@ public class FileTrackerImpl implements FileTracker {
 		fileHandlers.putIfAbsent(path, h);
 	}
 	
+	@Override
+	public void removeFileHandler(String path) throws NoNodeException {
+		if (fileHandlers.remove(path) == null)
+			throw new ApeException.NoNodeException(path);
+	}
+	
+	
+	
 	public static class ApeFileHandler implements FileTracker.FileHandler {
 		File dir;
 		File file;

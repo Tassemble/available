@@ -8,10 +8,12 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TestFactoryClient {
 
+	@Ignore
 	@Test
 	public void testSendMsg() throws UnknownHostException, IOException, InterruptedException {
 		Socket socket = new Socket("127.0.0.1", 5551);

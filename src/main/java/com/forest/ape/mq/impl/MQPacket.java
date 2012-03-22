@@ -10,10 +10,10 @@ public class MQPacket {
 	
 	
 	
-	public MQPacket(byte[] data, AsynSentHandler handler) {
+	public MQPacket(byte[] data, CallableHandler.AsynSentHandler asynSentHandler) {
 		super();
 		this.data = data;
-		this.handler = handler;
+		this.handler = asynSentHandler;
 	}
 	public CallableHandler.AsynSentHandler getHandler() {
 		return handler;
