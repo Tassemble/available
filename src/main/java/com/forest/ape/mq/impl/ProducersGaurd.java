@@ -16,19 +16,29 @@ import com.rabbitmq.client.AMQP.BasicProperties;
 public class ProducersGaurd {
 	static Logger LOG = LoggerFactory.getLogger(ProducersGaurd.class);
 	 ConcurrentHashMap<String, MessageProducer> queues = new ConcurrentHashMap<String, MessageProducer>();
+	 /** use for queue name for consumers */
+	 HashMap<String, MessageProducer> namingQueues = new HashMap<String, MessageProducer>();
 	 AtomicLong totalProducers = new AtomicLong(0);
 	 ConnectionFactory connectionFactory;
 	 static  String EXCHANGE_NAME = "direct_data";
 	 volatile boolean throttleAll = false;
 	 ProducerConfig config;
+	 String defaultQueueName = "/!/NamingQueue_";
+	 
 	
-	
-	
-	public ProducersGaurd() {
+	public ProducersGaurd() throws IOException {
 		super();
 		connectionFactory = new ConnectionFactory();
 		config = new ProducerConfig();
 		config.loadConfig();
+		
+		for (String consumerName : config.consumers) {
+			consumerName = defaultQueueName + consumerName;
+			MessageProducer pro = new MessageProducer(consumerName, config);
+			pro.start();
+			LOG.info("create default queue:" + consumerName);
+			namingQueues.put(consumerName, pro);
+		}
 	}
 
 
@@ -58,8 +68,14 @@ public class ProducersGaurd {
 		MessageProducer mp = queues.get(path);
 		if (mp == null) {
 			mp = new MessageProducer(path, config);
-			totalProducers.addAndGet(1);
+			
+			for (Map.Entry<String, MessageProducer> pro : namingQueues.entrySet()) {
+				String queueName = pro.getKey() + path;
+				LOG.info("create path(queue) :" + queueName);
+				pro.getValue().addPacket(new MQPacket(queueName.getBytes("UTF-8"), null));
+			}
 			queues.put(path, mp);
+			totalProducers.addAndGet(1);
 			mp.start();
 		}
 		return mp.addPacket(packet);
@@ -74,15 +90,16 @@ public class ProducersGaurd {
 		Channel ch;
 		Connection conn;
 		final String bindName;
-		final String queue;
+		final List<String> queues = new ArrayList<String>();
 		int idleLimit = 60; 
 		volatile boolean throttle = false;
 		
+		/** one binding to several queues for one tree node*/
 		MessageProducer(String queueName, ProducerConfig config) throws IOException {
 			super("queue[" + queueName + "]");
 			idleLimit = config.queueIdleLimit;
 			bindName = queueName;
-			queue= queueName;
+			
 			LOG.info("start MessageProducer...");
 			conn = connectionFactory.newConnection(config.addrArr);
 			ch = conn.createChannel();
@@ -95,6 +112,13 @@ public class ProducersGaurd {
 			// first durable
 			if (!config.enableHA)
 				haPolicy = null;
+			/**
+			 *  exchange - the name of the exchange
+				type - the exchange type direct topic fanout headers
+				durable - true if we are declaring a durable exchange (the exchange will survive a server restart)
+			 */
+			ch.exchangeDeclare(EXCHANGE_NAME, "direct", true);
+			
 			
 			/**
 			 *  queue - the name of the queue
@@ -103,20 +127,24 @@ public class ProducersGaurd {
 				autoDelete - true if we are declaring an autodelete queue (server will delete it when no longer in use)
 				arguments - other properties (construction arguments) for the queue
 			 */
-			ch.queueDeclare(queueName, true, false, false, haPolicy);
-			/**
-			 *  exchange - the name of the exchange
-				type - the exchange type direct topic fanout headers
-				durable - true if we are declaring a durable exchange (the exchange will survive a server restart)
-			 */
-			ch.exchangeDeclare(EXCHANGE_NAME, "direct", true);
-			
-			/**
-			 * queue name
-			 * exchange name
-			 * bind name
-			 */
-			ch.queueBind(queueName, EXCHANGE_NAME, queueName);
+			if (queueName.startsWith(defaultQueueName)) {
+				ch.queueDeclare(queueName, true, false, false, haPolicy);
+				ch.queueBind(queueName, EXCHANGE_NAME, bindName);
+				queues.add(queueName);
+			} else {
+				for (String each : namingQueues.keySet()) {
+					String rename = each  + queueName;
+					ch.queueDeclare(rename, true, false, false, haPolicy);
+					
+					/**
+					 * queue name
+					 * exchange name
+					 * bind name
+					 */
+					ch.queueBind(rename, EXCHANGE_NAME, bindName);
+					queues.add(rename);
+				}
+			}
 			
 			/**
 			 * 
@@ -139,10 +167,10 @@ public class ProducersGaurd {
 					MQPacket p = outstandingQueue.poll(1, TimeUnit.SECONDS);
 					if (p == null) {
 						idle++;
-						LOG.debug("queue[" + queue + "] is idle[time="+idle+"]"); 
+						LOG.debug("queue " + queues.toString() + " is idle[time="+idle+"]"); 
 						if (idle == idleLimit) {
 							throttle = true;
-							LOG.info("close queue[" + queue + "] thread!");
+							LOG.info("close queue " + queues.toString() + " thread!");
 							shutdown();
 						}
 						continue;
@@ -168,14 +196,13 @@ public class ProducersGaurd {
 			/** refuse accepting any packet */
 			throttle = true;
 			
-			queues.remove(queue);
+			queues.remove(bindName);
 			if (isRunning == false)
 				return;
 			isRunning = false;
 			this.interrupt();
 			ch.close();
 			conn.close();
-			
 		}
 		
 		public boolean addPacket(MQPacket p) {
@@ -205,6 +232,9 @@ public class ProducersGaurd {
 		BasicProperties mp;
 		int queueIdleLimit = 60;
 		boolean persistent = true;
+		List<String> consumers = null;
+		
+		//List<String> consumerIDs = new ArrayList<String>();
 		
 		public void loadConfig() {
 			try {
@@ -246,6 +276,16 @@ public class ProducersGaurd {
 				else {
 					mp = MessageProperties.BASIC;
 				}
+				
+				
+				value = (value = p.get("Consumers")) != null ? value.toString() : null;
+				if (value != null) {
+					consumers = Arrays.asList(value.toString().split(":"));
+					for (String string : consumers) {
+						LOG.info("consumer id:" + string);
+					}
+				}
+				assert(consumers != null);
 			} catch (Throwable e) {
 				LOG.error("config parse error!", e);
 			}

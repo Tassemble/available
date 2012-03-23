@@ -13,6 +13,13 @@ public interface CallableHandler {
 	}
 	
 	
+	interface RecvHandler {
+		public boolean handleRecv(byte[] data);
+	}
+	
+	
 	public boolean handleRecv(byte[] data, Object object);
+	
+	
 	
 }

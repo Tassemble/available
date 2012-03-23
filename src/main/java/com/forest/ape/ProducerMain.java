@@ -24,7 +24,7 @@ public class ProducerMain {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException, InterruptedException {
-		new ProducerMain().test(Long.valueOf(1000000));
+		new ProducerMain().test(Long.valueOf(100000));
 	}
 	
 	
@@ -43,8 +43,8 @@ public class ProducerMain {
 		Random r = new Random(System.currentTimeMillis());
 		for (int i = 0; i < size; i++) {
 			String ranQueue;
-			if (queueList.size() < 100)
-			{	ranQueue= String.valueOf(System.currentTimeMillis());
+			if (queueList.size() < 5)
+			{	ranQueue= String.valueOf("/node" + System.currentTimeMillis());
 				queueList.add(ranQueue);
 			} else {
 				ranQueue = queueList.get(r.nextInt(queueList.size()));
